@@ -15,22 +15,23 @@ export const brandConfig = {
   
   /**
    * Primary WhatsApp Number for Orders & Subscriptions.
+   * Can be configured on Vercel via VITE_WHATSAPP_NUMBER environment variable.
    * Format: Country code without + followed by 10-digit number (e.g. "919876543210")
    */
-  whatsappNumber: "919876543210", // EDITABLE: Replace with your actual Saladfarm WhatsApp number
+  whatsappNumber: (import.meta.env.VITE_WHATSAPP_NUMBER as string) || "919876543210",
   
   /**
    * Phone number for direct phone calls (if customer prefers calling)
    */
-  contactPhone: "+91 98765 43210",
+  contactPhone: (import.meta.env.VITE_CONTACT_PHONE as string) || "+91 98765 43210",
   
   /**
    * Direct Delivery Integration Links
-   * Replace with your live restaurant profile URLs when active.
+   * Can be configured on Vercel via VITE_SWIGGY_URL, VITE_ZOMATO_URL, VITE_INSTAGRAM_URL
    */
-  swiggyUrl: "https://www.swiggy.com/restaurants/saladfarm-jodhpur", // EDITABLE
-  zomatoUrl: "https://www.zomato.com/jodhpur/saladfarm", // EDITABLE
-  instagramUrl: "https://www.instagram.com/saladfarm", // EDITABLE
+  swiggyUrl: (import.meta.env.VITE_SWIGGY_URL as string) || "https://www.swiggy.com/restaurants/saladfarm-jodhpur",
+  zomatoUrl: (import.meta.env.VITE_ZOMATO_URL as string) || "https://www.zomato.com/jodhpur/saladfarm",
+  instagramUrl: (import.meta.env.VITE_INSTAGRAM_URL as string) || "https://www.instagram.com/saladfarm",
 
   /**
    * Delivery Pricing & Logistics Rules
