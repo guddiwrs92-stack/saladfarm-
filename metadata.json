@@ -1,0 +1,6 @@
+{
+  "name": "Saladfarm Jodhpur",
+  "description": "Saladfarm - Fresh salads, wholesome meals, and subscription plans in Jodhpur, Rajasthan. Built for Fitness. Loved for Taste.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
